@@ -1,0 +1,273 @@
+#project-line-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.project-line-arrows {
+  display: none;
+}
+
+.project-box-wrapper {
+  position: relative;
+  background: var(--background-primary);
+  border: 1px solid transparent;
+  box-shadow: 0 0 6px var(--bar-color), inset 0 0 1px var(--bar-color);
+  z-index: 0;
+
+  /* borda animada */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--bar-color);
+    box-shadow: 0 0 10px var(--bar-color);
+    animation: drawBorder 3s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+#pbw-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 16px;
+}
+
+#name-and-tech {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#name-box {
+  p {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  h1 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+  }
+}
+
+#tech-box {
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+#project-box-description {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+#decription {
+  font-size: 10px;
+  text-transform: initial;
+}
+
+#btn-and-decoration {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-project.white {
+  font-size: 12px;
+  color: var(--content-primary);
+  border: 1px solid var(--content-primary);
+  box-shadow: 0 0 2px var(--content-primary),
+    0 0 2px var(--content-primary) inset;
+
+  & img {
+    width: 10px;
+  }
+
+  &:hover {
+    background-color: rgba(125, 125, 125, 0.4);
+  }
+}
+
+#img-decoration {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: 15px;
+  width: 60px;
+  height: 28px;
+  z-index: 0;
+
+  & img {
+    position: relative;
+    z-index: 1;
+
+    &:nth-of-type(2) {
+      position: absolute;
+      bottom: 50%;
+      right: -8%;
+      width: 70px;
+    }
+
+    &:nth-of-type(3) {
+      position: absolute;
+      width: inherit;
+      top: 18%;
+      animation: flip-in-hor-bottom 1.5s ease-in-out infinite alternate;
+    }
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #project-line-wrapper {
+    padding: 0 4.5rem;
+  }
+
+  #pbw-content {
+    padding: 15px 30px;
+  }
+
+  #name-box {
+    p {
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+  #tech-box {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  #decription {
+    font-size: 16px;
+    text-transform: initial;
+  }
+
+  .view-project.white {
+    font-size: 14px;
+
+    & img {
+      width: 15px;
+    }
+  }
+
+  #img-decoration {
+    right: 20px;
+    bottom: 10px;
+    width: 70px;
+    height: 40px;
+
+    & img {
+      &:nth-of-type(2) {
+        right: -10%;
+        width: 85px;
+      }
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #project-line-wrapper {
+    margin: 0 0rem;
+    gap: 1rem;
+  }
+
+  .project-line-arrows {
+    display: flex;
+
+    & button {
+      width: 3rem;
+      height: 3rem;
+      border: none;
+      cursor: pointer;
+
+      &:nth-of-type(1) {
+        background-image: url(../../assets/icons/project-arrow-up-wrapper.svg);
+        background-color: transparent;
+        background-size: cover;
+        transform: rotate(-90deg);
+
+        &:hover {
+          background-image: url(../../assets/icons/project-arrow-down-wrapper.svg);
+          background-color: transparent;
+          background-size: cover;
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .project-line-arrows.right {
+    & button {
+      &:nth-of-type(1) {
+        background-image: url(../../assets/icons/project-arrow-up-wrapper.svg);
+        background-color: transparent;
+        background-size: cover;
+        transform: rotate(90deg);
+
+        &:hover {
+          background-image: url(../../assets/icons/project-arrow-down-wrapper.svg);
+          background-color: transparent;
+          background-size: cover;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  .project-box-wrapper.active {
+    background: var(--background-secondary);
+  }
+
+  #pbw-content {
+    padding: 16px 20px;
+  }
+
+  #name-box {
+    p {
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+
+  #tech-box {
+    img {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  #decription {
+    font-size: 12px;
+  }
+
+  .view-project.white {
+    font-size: 12px;
+    padding: 8px 12px;
+
+    & img {
+      width: 12px;
+    }
+  }
+}

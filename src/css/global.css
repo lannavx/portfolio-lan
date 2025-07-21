@@ -1,0 +1,85 @@
+:root {
+  --ff-space: "Space Grotesk", sans-serif;
+
+  --background-primary: #0a0909;
+  --background-secondary: #151313;
+  --content-primary: #f6f6f6;
+  --highlight-pink: #840f33;
+  --highlight-gree: #00cc99;
+  --gray-base: #575757;
+  --success-green: #4cd46b;
+  --success-green-transparent: rgba(76, 212, 107, 0.15);
+  --gray-dark: #464646;
+  --gray-medium: #595959;
+  --gray-light: #7d7d7d;
+  --gray-deep: #3c3c3c;
+  --highlight-yellow: #fdc00a;
+  --bar-color: rgba(248, 57, 44, 0.5);
+
+  --fw-bold: 700;
+  --fw-medium: 500;
+  --fw-regular: 400;
+  --fw-light: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: var(--ff-space);
+  color: var(--content-primary);
+  background: var(--background-primary);
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--content-primary);
+}
+
+span {
+  font-size: 10px;
+  color: var(--highlight-pink);
+}
+
+span,
+a,
+h1,
+h2,
+h3,
+p {
+  text-transform: uppercase;
+}
+
+.view-project {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.7px;
+  color: var(--highlight-gree);
+  border: 1px solid var(--highlight-gree);
+  box-shadow: 0 0 4px var(--highlight-gree), 0 0 3px var(--highlight-gree) inset;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+
+  & img {
+    width: 8px;
+    animation: arrowright 0.6s infinite alternate;
+  }
+
+  &:hover {
+    background-color: #00cc9921;
+    color: #00ffcc;
+  }
+}

@@ -1,0 +1,150 @@
+#project-cntr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+#project-video {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+#video-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  #video-decor-bar {
+    min-height: 100%;
+    min-width: 20px;
+    background: url("../../assets/icons/vector-video.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  & #video-wrapper {
+    border: 1px solid var(--bar-color);
+    width: 100%;
+  }
+
+  & video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--bar-color);
+}
+
+.projects-decorations {
+  display: flex;
+  justify-content: space-between;
+
+  & span {
+    color: var(--bar-color);
+    font-size: 4px;
+    letter-spacing: 1px;
+  }
+}
+
+.words-decorations {
+  display: flex;
+  flex-direction: column;
+}
+
+.word-column {
+  display: none;
+}
+
+#project-card-wrapper {
+  display: none;
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #video-box {
+    #video-decor-bar {
+      min-width: 30px;
+    }
+  }
+
+  .projects-decorations {
+    & span {
+      font-size: 6px;
+      letter-spacing: 1.5px;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #project-cntr {
+    flex-direction: row;
+    gap: 32px;
+    padding: 0 64px;
+    align-items: start;
+    justify-content: center;
+  }
+
+  #video-box {
+    #video-decor-bar {
+      min-width: 40px;
+    }
+  }
+
+  #project-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 0.85fr);
+    gap: 10px;
+
+    & .image-project {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 100%;
+      height: 100%;
+
+      & .img-cntr {
+        border: 1px solid var(--bar-color);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          max-height: 400px;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .projects-decorations {
+    margin-top: 2px;
+
+    & span {
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .words-decorations.right {
+    align-items: end;
+  }
+
+  .word-column {
+    display: flex;
+    flex-direction: column;
+  }
+}

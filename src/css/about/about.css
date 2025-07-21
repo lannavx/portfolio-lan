@@ -1,0 +1,22 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2.25rem;
+  gap: 50px;
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #about {
+    padding: 0rem 4.25rem;
+    gap: 64px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #about {
+    flex-direction: row;
+    padding: 0 5rem;
+  }
+}

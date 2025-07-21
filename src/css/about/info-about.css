@@ -1,0 +1,171 @@
+#info-about {
+  display: flex;
+  gap: 16px;
+}
+
+#icon {
+  display: flex;
+  gap: 2px;
+
+  & #vector-avatar {
+    width: 7px;
+    height: 45px;
+  }
+
+  & #avatar {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+#description-about {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+#title-about {
+  display: flex;
+  justify-content: space-between;
+
+  & p {
+    font-size: 8px;
+    font-weight: var(--fw-medium);
+    letter-spacing: 2px;
+    color: var(--gray-light);
+  }
+}
+
+.description-itens {
+  display: flex;
+  gap: 1px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: chatFadeIn 0.5s ease forwards;
+
+  & .vector {
+    background-color: var(--highlight-yellow);
+    width: 4px;
+  }
+
+  & p {
+    background-color: rgba(60, 11, 51, 0.2);
+    border: 1px solid var(--highlight-yellow);
+    padding: 8px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: var(--gray-light);
+  }
+}
+
+.description-itens:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.description-itens:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.description-itens:nth-child(4) {
+  animation-delay: 3s;
+}
+.description-itens:nth-child(5) {
+  animation-delay: 5s;
+}
+.description-itens:nth-child(6) {
+  animation-delay: 7s;
+}
+.description-itens:nth-child(7) {
+  animation-delay: 9s;
+}
+
+#dots-animation {
+  margin-top: 4px;
+  display: flex;
+  gap: 2px;
+
+  & .dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--gray-deep);
+    animation: float-up 1s ease-in-out infinite;
+
+    &:nth-of-type(odd) {
+      animation-delay: 0s;
+    }
+
+    &:nth-of-type(even) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #info-about {
+    gap: 32px;
+  }
+
+  #icon {
+    gap: 3px;
+
+    & #vector-avatar {
+      width: 100%;
+      height: 82px;
+    }
+
+    & #avatar {
+      width: 82px;
+      height: 82px;
+    }
+  }
+
+  #description-about {
+    gap: 8px;
+  }
+
+  #title-about {
+    & p {
+      font-size: 10px;
+    }
+  }
+
+  .description-itens {
+    gap: 2px;
+
+    & p {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+
+  #dots-animation {
+    gap: 4px;
+
+    & .dot {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #info-about {
+    width: 45%;
+  }
+
+  #title-about {
+    & p {
+      font-size: 12px;
+    }
+  }
+
+  .description-itens {
+    & p {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px 14px;
+      font-size: 14px;
+    }
+  }
+}

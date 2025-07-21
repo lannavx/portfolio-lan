@@ -1,0 +1,47 @@
+footer {
+  display: flex;
+  margin-top: 2.5rem;
+
+  & span {
+    letter-spacing: 10px;
+    font-size: 8px;
+  }
+
+  & img {
+    display: none;
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: end;
+    margin-top: 4rem;
+
+    & span {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  & footer {
+    position: relative;
+    flex-direction: column;
+    height: 100%;
+
+    & span {
+      align-self: flex-end;
+    }
+
+    & img {
+      position: absolute;
+      display: flex;
+      right: -80px;
+      bottom: -90px;
+      width: 70%;
+    }
+  }
+}

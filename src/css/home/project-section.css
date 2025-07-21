@@ -1,0 +1,272 @@
+#project-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#projects-cntr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#project-box {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  & img {
+    width: 100%;
+  }
+}
+
+#mask-image {
+  position: absolute;
+  width: 90%;
+  mask-image: url(../../assets/icons/project-mask.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}
+
+#project-text-decor {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  top: -9px;
+
+  & span {
+    font-size: 7px;
+    font-weight: var(--fw-medium);
+    letter-spacing: 3.5px;
+  }
+}
+
+#top-texts-decor {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.25rem;
+}
+
+#text-vertical {
+  margin-right: 1px;
+  writing-mode: sideways-rl;
+}
+
+#project-info-cntr {
+  display: flex;
+  align-self: center;
+  gap: 1.125rem;
+}
+
+#project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#project-info-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project-title {
+  display: flex;
+  align-items: end;
+  gap: 6px;
+
+  & p {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    color: var(--highlight-gree);
+  }
+}
+
+#title {
+  & p {
+    font-size: 9px;
+    font-weight: var(--fw-medium);
+    letter-spacing: 3px;
+    color: var(--gray-base);
+  }
+
+  & h1 {
+    font-size: 14px;
+    font-weight: var(--fw-medium);
+    letter-spacing: 1px;
+  }
+}
+
+#tech-stack {
+  display: flex;
+  align-items: start;
+  gap: 0.25rem;
+}
+
+#description-project {
+  font-size: 12px;
+  text-transform: initial;
+}
+
+#project-arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  & button {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    cursor: pointer;
+
+    &:nth-of-type(1) {
+      background-image: url(../../assets/icons/project-arrow-up-wrapper.svg);
+      background-color: transparent;
+      background-size: cover;
+
+      &:hover {
+        background-image: url(../../assets/icons/project-arrow-down-wrapper.svg);
+        background-color: transparent;
+        background-size: cover;
+        transform: rotate(180deg);
+      }
+    }
+
+    &:nth-of-type(2) {
+      background-image: url(../../assets/icons/project-arrow-up-wrapper.svg);
+      background-color: transparent;
+      background-size: cover;
+      transform: rotate(180deg);
+
+      &:hover {
+        background-image: url(../../assets/icons/project-arrow-down-wrapper.svg);
+        background-color: transparent;
+        background-size: cover;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+#texts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  p {
+    font-size: 7px;
+    letter-spacing: 5px;
+    color: var(--success-green-transparent);
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #projects-wrapper {
+    gap: 4rem;
+  }
+
+  #project-text-decor {
+    & span {
+      font-size: 10px;
+      letter-spacing: 7px;
+    }
+  }
+
+  #project-info-cntr {
+    gap: 1.5rem;
+  }
+
+  #project-info {
+    gap: 18px;
+  }
+
+  #project-title {
+    gap: 0.75rem;
+
+    & p {
+      font-size: 1rem;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  #title {
+    & p {
+      font-size: 1rem;
+      letter-spacing: 5px;
+    }
+
+    & h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0.125rem;
+    }
+  }
+
+  #tech-stack {
+    gap: 0.5rem;
+
+    & img {
+      width: 25px;
+    }
+  }
+
+  #description-project {
+    font-size: 1.25rem;
+  }
+
+  .view-project {
+    gap: 7px;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    letter-spacing: 0.125rem;
+
+    & img {
+      width: 15px;
+    }
+  }
+
+  #project-arrows {
+    gap: 1rem;
+
+    & button {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  #texts-wrapper {
+    gap: 29px;
+    width: 100%;
+    padding-right: 68px;
+
+    & p {
+      font-size: 12px;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #projects-wrapper {
+    width: 100%;
+  }
+
+  #texts-wrapper {
+    padding-right: 135px;
+  }
+}

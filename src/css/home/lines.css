@@ -1,0 +1,18 @@
+.lines {
+  display: none;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  & .lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 10vw;
+    max-width: 75px;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}

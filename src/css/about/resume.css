@@ -1,0 +1,199 @@
+#resume {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  & h1 {
+    font-size: 14px;
+    letter-spacing: 10px;
+    font-weight: var(--regular);
+    color: var(--gray-dark);
+  }
+}
+
+#info-resume {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.resume-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & h2 {
+    font-size: 12px;
+    font-weight: var(--fw-light);
+    letter-spacing: 2px;
+    color: var(--success-green);
+  }
+}
+
+.titles {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+
+  & h3 {
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 2px;
+    color: var(--highlight-gree);
+  }
+
+  & p {
+    font-size: 12px;
+    font-weight: var(--fw-light);
+    letter-spacing: 1px;
+    color: var(--gray-medium);
+  }
+}
+
+.descriptions-and-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & p {
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: var(--fw-light);
+  }
+
+  & .view-project {
+    padding: 5px 8px;
+    gap: 2px;
+    font-size: 8px;
+  }
+}
+
+.descriptions {
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: var(--fw-light);
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+  font-size: 12px;
+
+  & img {
+    width: 15px;
+    animation: none;
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #resume {
+    gap: 34px;
+
+    & h1 {
+      font-size: 16px;
+    }
+  }
+
+  #info-resume {
+    gap: 36px;
+  }
+
+  .resume-sections {
+    & h2 {
+      font-size: 14px;
+    }
+  }
+
+  .titles {
+    gap: 10px;
+
+    & h3 {
+      font-size: 16px;
+    }
+
+    & p {
+      font-size: 14px;
+    }
+  }
+
+  .descriptions-and-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & p {
+      font-size: 12px;
+    }
+
+    & .view-project {
+      padding: 6px 8px;
+      font-size: 10px;
+    }
+  }
+
+  .descriptions {
+    font-size: 12px;
+  }
+
+  .download {
+    padding: 8px;
+    font-size: 14px;
+
+    & img {
+      width: 20px;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #resume {
+    & h1 {
+      font-size: 18px;
+    }
+  }
+
+  .resume-sections {
+    & h2 {
+      font-size: 18px;
+    }
+  }
+
+  .titles {
+    & h3 {
+      font-size: 18px;
+    }
+
+    & p {
+      font-size: 16px;
+    }
+  }
+
+  .descriptions-and-buttons {
+    & p {
+      font-size: 14px;
+    }
+
+    & .view-project {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  }
+
+  .descriptions {
+    font-size: 16px;
+  }
+
+  .view-project.download {
+    padding: 10px;
+    font-size: 14px;
+
+    & img {
+      width: 22px;
+    }
+  }
+}

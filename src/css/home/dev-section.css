@@ -1,0 +1,152 @@
+#dev-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+#dev-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+#title-dev {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+  & p {
+    font-size: 0.75rem;
+    font-weight: var(--fw-light);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  #country-info {
+    display: flex;
+    gap: 3px;
+  }
+}
+
+#branding {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#main-logo {
+  width: 100%;
+}
+
+#subtitle {
+  display: flex;
+  justify-content: space-between;
+
+  & h1 {
+    font-size: 0.75rem;
+    font-weight: var(--fw-light);
+    letter-spacing: 1px;
+  }
+}
+
+#barcode-img {
+  display: flex;
+  justify-content: flex-end;
+
+  & img {
+    max-width: 80%;
+  }
+}
+
+#square-imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+
+  & img {
+    width: 80%;
+
+    &:nth-of-type(odd) {
+      animation: slide 4s infinite alternate ease-in-out,
+        fade 3s infinite ease-in-out;
+    }
+
+    &:nth-of-type(even) {
+      animation: slide 4s infinite alternate-reverse ease-in-out,
+        fade 3s infinite ease-in-out;
+    }
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #dev-section {
+    gap: 5rem;
+  }
+
+  #dev-info {
+    gap: 1.5rem;
+  }
+
+  #title-dev {
+    gap: 3rem;
+
+    & p {
+      font-size: 18px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  #branding {
+    gap: 2.5rem;
+  }
+
+  #subtitle {
+    gap: 3.5rem;
+
+    & h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0.125rem;
+    }
+  }
+
+  #barcode-img {
+    width: 100%;
+
+    & img {
+      max-width: 100%;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #dev-section {
+    width: 100%;
+  }
+
+  #subtitle {
+    gap: 3rem;
+  }
+
+  #barcode-img {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 0.5rem 0;
+
+    & img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  #square-imgs {
+    gap: 40px;
+  }
+}

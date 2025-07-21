@@ -1,0 +1,24 @@
+#home {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4.5rem;
+  padding: 0rem 2.25rem;
+}
+
+/* Large Mobile */
+@media (min-width: 768px) {
+  #home {
+    gap: 6.5rem;
+    padding: 0rem 4.25rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  #home {
+    flex-direction: row;
+    gap: 6rem;
+    padding: 0 5rem;
+  }
+}
