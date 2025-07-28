@@ -8,13 +8,14 @@
   --highlight-gree: #00cc99;
   --gray-base: #575757;
   --success-green: #4cd46b;
-  --success-green-transparent: rgba(76, 212, 107, 0.15);
+  --success-green-transparent: rgba(76, 212, 108, 0.3);
   --gray-dark: #464646;
   --gray-medium: #595959;
   --gray-light: #7d7d7d;
   --gray-deep: #3c3c3c;
   --highlight-yellow: #fdc00a;
   --bar-color: rgba(248, 57, 44, 0.5);
+  --icon-color: #f8392c;
 
   --fw-bold: 700;
   --fw-medium: 500;
@@ -33,6 +34,7 @@ body {
   font-family: var(--ff-space);
   color: var(--content-primary);
   background: var(--background-primary);
+  overflow-x: hidden;
 }
 
 ul,

@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .project-line-arrows {
@@ -12,10 +14,12 @@
 
 .project-box-wrapper {
   position: relative;
+  flex: 0 0 100%;
   background: var(--background-primary);
   border: 1px solid transparent;
   box-shadow: 0 0 6px var(--bar-color), inset 0 0 1px var(--bar-color);
   z-index: 0;
+  cursor: pointer;
 
   /* borda animada */
   &::before {
@@ -33,7 +37,7 @@
   }
 }
 
-#pbw-content {
+.pbw-content {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -42,13 +46,13 @@
   padding: 10px 16px;
 }
 
-#name-and-tech {
+.name-and-tech {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#name-box {
+.name-box {
   p {
     font-size: 10px;
     letter-spacing: 1px;
@@ -60,25 +64,25 @@
   }
 }
 
-#tech-box {
-  img {
-    width: 16px;
-    height: 16px;
+.tech-box {
+  & .bxl {
+    color: var(--content-primary);
+    font-size: 20px;
   }
 }
 
-#project-box-description {
+.project-box-description {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
-#decription {
+.description {
   font-size: 10px;
   text-transform: initial;
 }
 
-#btn-and-decoration {
+.btn-and-decoration {
   display: flex;
   justify-content: space-between;
 }
@@ -99,7 +103,7 @@
   }
 }
 
-#img-decoration {
+.img-decoration {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -132,13 +136,18 @@
 @media (min-width: 768px) {
   #project-line-wrapper {
     padding: 0 4.5rem;
+    gap: 40px;
   }
 
-  #pbw-content {
+  .project-box-wrapper {
+    flex: 0 0 112%;
+  }
+
+  .pbw-content {
     padding: 15px 30px;
   }
 
-  #name-box {
+  .name-box {
     p {
       font-size: 14px;
     }
@@ -148,16 +157,14 @@
     }
   }
 
-  #tech-box {
-    img {
-      width: 24px;
-      height: 24px;
+  .tech-box {
+    & .bxl {
+      font-size: 26px;
     }
   }
 
-  #decription {
+  .description {
     font-size: 16px;
-    text-transform: initial;
   }
 
   .view-project.white {
@@ -168,7 +175,7 @@
     }
   }
 
-  #img-decoration {
+  .img-decoration {
     right: 20px;
     bottom: 10px;
     width: 70px;
@@ -186,8 +193,8 @@
 /* Desktop */
 @media (min-width: 1200px) {
   #project-line-wrapper {
-    margin: 0 0rem;
-    gap: 1rem;
+    gap: 0px;
+    overflow: visible;
   }
 
   .project-line-arrows {
@@ -207,8 +214,6 @@
 
         &:hover {
           background-image: url(../../assets/icons/project-arrow-down-wrapper.svg);
-          background-color: transparent;
-          background-size: cover;
           transform: rotate(90deg);
         }
       }
@@ -225,23 +230,30 @@
 
         &:hover {
           background-image: url(../../assets/icons/project-arrow-down-wrapper.svg);
-          background-color: transparent;
-          background-size: cover;
+
           transform: rotate(-90deg);
         }
       }
     }
   }
 
-  .project-box-wrapper.active {
-    background: var(--background-secondary);
+  .project-box-wrapper {
+    flex: 0 0 32%;
+    transition: all 0.4s ease;
+    transform: scale(0.9);
   }
 
-  #pbw-content {
+  .project-box-wrapper.active {
+    background: var(--background-secondary);
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  .pbw-content {
     padding: 16px 20px;
   }
 
-  #name-box {
+  .name-box {
     p {
       font-size: 12px;
     }
@@ -251,14 +263,13 @@
     }
   }
 
-  #tech-box {
-    img {
-      width: 18px;
-      height: 18px;
+  .tech-box {
+    & .bxl {
+      font-size: 28px;
     }
   }
 
-  #decription {
+  .decription {
     font-size: 12px;
   }
 

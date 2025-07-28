@@ -70,6 +70,7 @@
 
   & img {
     width: 80%;
+    filter: drop-shadow(0 0 5px var(--highlight-pink));
 
     &:nth-of-type(odd) {
       animation: slide 4s infinite alternate ease-in-out,

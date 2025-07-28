@@ -20,11 +20,14 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s;
+  transition: all 0.3s ease;
+  transform: scale(.8);
 }
 
-.active {
-  background-color: var(--highlight-gree);
+.active-dot {
+  background-color: var(--bar-color);
   opacity: 1;
+  transform: scale(1);
 }
 
 /* Large Mobile */
@@ -32,21 +35,28 @@
   #projects {
     display: flex;
     flex-direction: column;
-    gap: 64px;
+    gap: 40px;
   }
 
   .dots {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .dot-btn {
-    height: 0.8rem;
-    width: 0.8rem;
+    transform: scale(1.8);
   }
+
+  .active-dot {
+    transform: scale(2.2);
+}
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
+  #projects {
+    gap: 64px;
+  }
+
   .dots {
     display: none;
   }

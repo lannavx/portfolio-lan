@@ -6,6 +6,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lan</title>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="src/assets/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="src/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
@@ -18,13 +19,13 @@
       <nav class="menu" aria-label="Navegação principal">
         <ul>
           <li><a href="#home">Início</a></li>
-          <li><a href="#project">Projetos</a></li>
-          <li><a href="#about">Sobre mim</a></li>
+          <li><a href="#projects-title">Projetos</a></li>
+          <li><a href="#about-title">Sobre mim</a></li>
         </ul>
       </nav>
 
       <nav class="contacts" aria-label="Links de contato">
-        <a href="mailto:lanna_148@hotmail.com" target="_blank"  aria-label="Enviar um Email">
+        <a href="mailto:lanna_148@hotmail.com" target="_blank" aria-label="Enviar um Email">
           <img src="src/assets/icons/bxs-envelope-open.svg" alt="Email"/>
         </a>
         <a href="https://www.linkedin.com/in/lannavieira/" target="_blank" aria-label="Acessar o LinkedIn">
@@ -81,7 +82,7 @@
                 <div id="project-text-decor">
                   <div id="top-texts-decor">
                     <span>portfolio showcase</span>
-                    <span>full-stack</span>
+                    <span class="stack">full-stack</span>
                   </div>
                   <span id="text-vertical">mundo pet</span>
                 </div>
@@ -93,25 +94,21 @@
                     <div id="project-title">
                       <div id="title">
                         <p>projeto</p>
-                        <h1>Mundo Pet</h1>
+                        <h1 id="project-name">Mundo Pet</h1>
                       </div>
-                      <p>full-stack</p>
+                      <p class="stack">full-stack</p>
                     </div>
   
                     <div id="tech-stack" aria-label="Tecnologias usadas">
-                      <img src="src/assets/icons/html.svg" alt="HTML"/>
-                      <img src="src/assets/icons/css.svg" alt="CSS"/>
-                      <img src="src/assets/icons/javascript.svg" 
-                      alt="JavaScript"/>
+                      <i class='bxl bx-html5'></i> 
+                      <i class='bxl bx-css3'></i> 
+                      <i class="bxl bx-javascript"></i>
                     </div>
                   </header>
   
-                  <p id="description-project">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <p id="description-project">Aplicação completa para agendamento de serviços em pet shop, com gerenciamento de dados via JSON Server e interface interativa</p>
 
-                    <a href="#" class="view-project">Ver projeto<img src="src/assets/icons/arrow-project.svg" alt=""/></a>
+                    <a href="https://github.com/lannavx/fullstack_studies/tree/main/projeto_mundo_pet" class="view-project" target="_blank">Ver projeto<img src="src/assets/icons/arrow-project.svg" alt=""/></a>
                 </article>
   
                 <div id="project-arrows">
@@ -128,9 +125,7 @@
                 front-end e full-stack. Espero que goste! :)
               </p>
               <p>
-                estou buscando uma oportunidade como desenvolvedora full-stack,
-                back-end ou front-end, se você se interessou pelo meu trabalho,
-                entre em contato pelo linkedin
+                Se você se interessou pelo meu trabalho, entre em contato pelo linkedin ou mande um e-mail!
               </p>
             </aside>
           </section>
@@ -143,7 +138,7 @@
         </section>
       </section>
 
-      <div class="section-titles">
+      <div id="projects-title" class="section-titles" >
         <img src="src/assets/icons/line-title.svg" alt="">
         <h2>projetos</h2>
       </div>
@@ -156,7 +151,7 @@
               <div id="video-decor-bar"></div>
 
               <div id="video-wrapper">
-                <video src="src/assets/videos/Stray Kids ＂CHEESE＂ Video.mp4" autoplay muted loop></video>
+                <video src="src/assets/videos/Stray Kids ＂CHEESE＂ Video.mp4" autoplay muted loop playsinline preload="auto"></video>
                 
                 <div class="line"></div>
 
@@ -240,118 +235,53 @@
 
         <section id="project-line-wrapper" aria-label="Descrição do projeto selecionado">
           <div class="project-line-arrows">
-            <button aria-label="Projeto anterior"></button>
-          </div>
+            <button aria-label="Projeto anterior" id="left-arrow"></button>
+          </div> 
 
-          <article class="project-box-wrapper">
-            <div id="pbw-content">
-              <header id="name-and-tech">
-                <div id="name-box">
+          <!-- <article class="project-box-wrapper active">
+            <div class="pbw-content">
+              <header class="name-and-tech">
+                <div class="name-box">
                   <p>Projeto</p>
                   <h1>Mundo Pet</h1>
                 </div>
 
-                <div id="tech-box">
-                  <img src="src/assets/icons/html-white.svg" alt="HTML">
-                  <img src="src/assets/icons/css-white.svg" alt="CSS">
-                  <img src="src/assets/icons/javascript-white.svg" alt="Javascript">
+                <div class="tech-box">
+                  <i class='bxl bx-html5'></i> 
+                  <i class='bxl bx-css3'></i> 
+                  <i class="bxl bx-javascript"></i>
                 </div>
               </header>
 
-              <section id="project-box-description">
-                <p id="decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <section class="project-box-description">
+                <p class="decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 
-                <div id="btn-and-decoration">
+                <div class="btn-and-decoration">
                   <a href="#" class="view-project white">Ver projeto <img src="src/assets/icons/arrow-project-white.svg" alt=""></a>
 
-                  <div id="img-decoration">
+                  <div class="img-decoration">
                     <img src="src/assets/icons/lines_block_white.svg" alt="">
                     <img src="src/assets/icons/lines_holder_white.svg" alt="">
                     <img src="src/assets/icons/wave_lines_white.svg" alt="">
                   </div>
                 </div>
-
               </section>
             </div>
-          </article>
-
-          <article class="project-box-wrapper active">
-            <div id="pbw-content">
-              <header id="name-and-tech">
-                <div id="name-box">
-                  <p>Projeto</p>
-                  <h1>Mundo Pet</h1>
-                </div>
-
-                <div id="tech-box">
-                  <img src="src/assets/icons/html-white.svg" alt="HTML">
-                  <img src="src/assets/icons/css-white.svg" alt="CSS">
-                  <img src="src/assets/icons/javascript-white.svg" alt="Javascript">
-                </div>
-              </header>
-
-              <section id="project-box-description">
-                <p id="decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                <div id="btn-and-decoration">
-                  <a href="#" class="view-project white">Ver projeto <img src="src/assets/icons/arrow-project-white.svg" alt=""></a>
-
-                  <div id="img-decoration">
-                    <img src="src/assets/icons/lines_block_white.svg" alt="">
-                    <img src="src/assets/icons/lines_holder_white.svg" alt="">
-                    <img src="src/assets/icons/wave_lines_white.svg" alt="">
-                  </div>
-                </div>
-
-              </section>
-            </div>
-          </article>
-
-          <article class="project-box-wrapper">
-            <div id="pbw-content">
-              <header id="name-and-tech">
-                <div id="name-box">
-                  <p>Projeto</p>
-                  <h1>Mundo Pet</h1>
-                </div>
-
-                <div id="tech-box">
-                  <img src="src/assets/icons/html-white.svg" alt="HTML">
-                  <img src="src/assets/icons/css-white.svg" alt="CSS">
-                  <img src="src/assets/icons/javascript-white.svg" alt="Javascript">
-                </div>
-              </header>
-
-              <section id="project-box-description">
-                <p id="decription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                <div id="btn-and-decoration">
-                  <a href="#" class="view-project white">Ver projeto <img src="src/assets/icons/arrow-project-white.svg" alt=""></a>
-
-                  <div id="img-decoration">
-                    <img src="src/assets/icons/lines_block_white.svg" alt="">
-                    <img src="src/assets/icons/lines_holder_white.svg" alt="">
-                    <img src="src/assets/icons/wave_lines_white.svg" alt="">
-                  </div>
-                </div>
-
-              </section>
-            </div>
-          </article>
+          </article> -->
 
           <div class="project-line-arrows right">
-            <button aria-label="Próximo projeto"></button>
+            <button aria-label="Próximo projeto" id="right-arrow"></button>
           </div>
         </section>
 
         <div class="dots">
         <button class="dot-btn"></button>
-        <button class="dot-btn active"></button>
+        <button class="dot-btn active-dot"></button>
         <button class="dot-btn"></button>
         </div>
       </section>
 
-      <div class="section-titles reverse">
+      <div id="about-title" class="section-titles reverse" >
         <h2>sobre mim</h2>
         <img src="src/assets/icons/line-title.svg" alt="">
       </div>
@@ -369,42 +299,12 @@
               <p>2025</p>
             </div>
 
-            <div class="description-itens">
+            <!-- Modelo -->
+            <!-- <div class="description-itens">
               <span class="vector"></span>
 
               <p>Olá! Agradeço por ter visto até aqui</p>
-            </div>
-
-            <div class="description-itens">
-              <span class="vector"></span>
-
-              <p>sou uma desenvolvedora full stack em transição de carreira
-              </p>
-            </div>
-
-            <div class="description-itens">
-              <span class="vector"></span>
-
-              <p>atuei durante +5 anos como administradora e me apaixonei por programação nos últimos dois anos</p>
-            </div>
-
-            <div class="description-itens">
-              <span class="vector"></span>
-
-              <p>as tecnologias que domino são: html, css, javascript, typescript, node</p>
-            </div>
-
-            <div class="description-itens">
-              <span class="vector"></span>
-
-              <p>estou buscando minha primeira oportunidade como dev!</p>
-            </div>
-
-            <div class="description-itens">
-              <span class="vector"></span>
-
-              <p>se gostou do que viu por aqui, entre em contato pelo linkedin ou e-mail e vamos conversar!</p>
-            </div>
+            </div> -->
 
             <div id="dots-animation">
               <span class="dot"></span>
@@ -425,40 +325,40 @@
 
               <div class="info-sections">
                 <div class="titles">
-                  <h3>Livros</h3>
-                  <p>front-end</p>
-                </div>
-
-                <div class="descriptions-and-buttons">
-                  <p>breve explicação sobre o projeto</p>
-
-                  <a href="#" class="view-project">Ver projeto <img src="src/assets/icons/arrow-project.svg" alt=""></a>
-                </div>
-              </div>
-
-              <div class="info-sections">
-                <div class="titles">
                   <h3>Mundo Pet</h3>
-                  <p>full stack</p>
+                  <p>front-end</p>
                 </div>
 
                 <div class="descriptions-and-buttons">
-                  <p>breve explicação sobre o projeto</p>
+                  <p>Aplicação de agendamento para pet shop com JSON Server e interface interativa</p>
 
-                  <a href="#" class="view-project">Ver projeto <img src="src/assets/icons/arrow-project.svg" alt=""></a>
+                  <a href="https://github.com/lannavx/fullstack_studies/tree/main/projeto_mundo_pet" target="_blank" class="view-project">Ver projeto <img src="src/assets/icons/arrow-project.svg" alt=""></a>
                 </div>
               </div>
 
               <div class="info-sections">
                 <div class="titles">
-                  <h3>Dados</h3>
+                  <h3>API Ticket Suporte</h3>
+                  <p>Back-end</p>
+                </div>
+
+                <div class="descriptions-and-buttons">
+                  <p>API RESTful com CRUD completo em Node.js puro e persistência via JSON</p>
+
+                  <a href="https://github.com/lannavx/fullstack_studies/tree/main/projeto_api_ticket_suporte" target="_blank" class="view-project">Ver projeto <img src="src/assets/icons/arrow-project.svg" alt=""></a>
+                </div>
+              </div>
+
+              <div class="info-sections">
+                <div class="titles">
+                  <h3>Real Trust</h3>
                   <p>front-end</p>
                 </div>
 
                 <div class="descriptions-and-buttons">
-                  <p>breve explicação sobre o projeto</p>
+                  <p>Landing Page de imobiliária fictícia com foco em acessibilidade e SEO</p>
 
-                  <a href="#" class="view-project">Ver projeto <img src="src/assets/icons/arrow-project.svg" alt=""></a>
+                  <a href="https://lannavx.github.io/lp-real-trust/" target="_blank" class="view-project">Ver projeto <img src="src/assets/icons/arrow-project.svg" alt=""></a>
                 </div>
               </div>
             </article>
@@ -472,16 +372,16 @@
                   <p>Servimex logística</p>
                 </div>
 
-                <p class="descriptions">fev/23 até janeiro/24</p>
+                <p class="descriptions">jul/21 até janeiro/24</p>
               </div>
 
               <div class="info-sections">
                 <div class="titles">
-                  <h3>auxiliar de exportação</h3>
-                  <p>Servimex logística</p>
+                  <h3>Aprendiz de Vendas</h3>
+                  <p>Nita Alimentos</p>
                 </div>
 
-                <p class="descriptions">fev/23 até janeiro/24</p>
+                <p class="descriptions">jan/21 até julho/21</p>
               </div>
 
               <div class="info-sections">
@@ -490,7 +390,7 @@
                   <p>santos brasil s.a</p>
                 </div>
 
-                <p class="descriptions">fev/23 até janeiro/24</p>
+                <p class="descriptions">jan/19 até agosto/20</p>
               </div>
             </article>
 
@@ -523,11 +423,13 @@
             </article>
           </div>
 
-          <a href="#" class="view-project download" aria-label="Baixar currículo em PDF"> <img src="src/assets/icons/file-down.svg" alt="">baixar pdf do cv</a>
+          <a href="src/assets/docs/lanna-vieira-curriculo.pdf" target="_blank" class="view-project download" aria-label="Visualizar currículo em PDF" > <img src="src/assets/icons/file-down.svg" alt="">Ver currículo em PDF</a>
         </section>
       </section>
 
       <div id="circle-decoration"><img src="src/assets/icons/circle.svg" alt=""></div>
     </main>
+
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
