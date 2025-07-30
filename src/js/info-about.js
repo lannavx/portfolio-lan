@@ -1,10 +1,10 @@
 // Lista com as mensagens a serem exibidas
 const descriptions = [
   { description: "▶ Iniciando conexão neural com você..."},
-  { description: "▶ Olá, humano. Eu sou a IA da Lan" },
+  { description: "▶ Olá, humano. Eu sou a IA da Lanna" },
   { description: "▶ Nome de identificação: Lan (Culpa da criadora, criatividade: sistema offline)" },
   { description: "▶ Obrigado por acessar este ponto da rede. Você chegou longe!" },
-  { description: "▶ Lan é uma desenvolvedora full stack em transição de carreira"},
+  { description: "▶ Lanna é uma desenvolvedora full stack em transição de carreira"},
   { description: "▶ Atuou por mais de 5 anos na área administrativa, até se apaixonar por programação. Conversão para código: concluída" },
   { description: "▶ Pacote de habilidades carregado: HTML • CSS • JavaScript • Node.js." },
   { description: "▶ Status atual: em busca de uma missão oficial no universo dev. Pronta para onboarding"},

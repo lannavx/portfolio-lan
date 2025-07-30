@@ -14,20 +14,18 @@
 .dot-btn {
   border: none;
   background-color: var(--content-primary);
-  opacity: 0.7;
-  height: 0.5rem;
-  width: 0.5rem;
+  opacity: 0.2;
+  height: 0.8rem;
+  width: 0.8rem;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.5s;
   transition: all 0.3s ease;
-  transform: scale(.8);
 }
 
 .active-dot {
   background-color: var(--bar-color);
   opacity: 1;
-  transform: scale(1);
 }
 
 /* Large Mobile */
@@ -43,12 +41,9 @@
   }
 
   .dot-btn {
-    transform: scale(1.8);
+    height: 1rem;
+    width: 1rem;
   }
-
-  .active-dot {
-    transform: scale(2.2);
-}
 }
 
 /* Desktop */

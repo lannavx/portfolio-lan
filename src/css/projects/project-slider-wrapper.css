@@ -20,7 +20,7 @@
   box-shadow: 0 0 6px var(--bar-color), inset 0 0 1px var(--bar-color);
   z-index: 0;
   cursor: pointer;
-
+  
   /* borda animada */
   &::before {
     content: "";
@@ -193,12 +193,14 @@
 /* Desktop */
 @media (min-width: 1200px) {
   #project-line-wrapper {
+    align-items: stretch;
     gap: 0px;
     overflow: visible;
   }
 
   .project-line-arrows {
     display: flex;
+    align-items: center;
 
     & button {
       width: 3rem;
@@ -239,8 +241,7 @@
 
   .project-box-wrapper {
     flex: 0 0 32%;
-    transition: all 0.4s ease;
-    transform: scale(0.9);
+    transform: scale(0.9);  
   }
 
   .project-box-wrapper.active {
@@ -250,6 +251,7 @@
   }
 
   .pbw-content {
+    justify-content: space-between;
     padding: 16px 20px;
   }
 

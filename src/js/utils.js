@@ -19,11 +19,12 @@ export function createIcons(iconName) {
 }
 
 // Cria dinamicamente o elemento img com as imagens do projeto
-export function createImages(projectImages) {
+export function createImages(projectImages, projectTitle) {
   const images = document.createElement("img")
 
   // Define o caminho das imagens usando o nome recebido
   images.src = `src/assets/img/${projectImages}`
+  images.alt = `Imagem ilustrativa do projeto ${projectTitle}`
 
   return images
 }
