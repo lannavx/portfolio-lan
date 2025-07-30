@@ -66,7 +66,7 @@ export const projects = [
   {
     project: "Real Trust", 
     stack: "Front-end", 
-    description: "Landing Page para agência imobiliária fictícia desenvolvida com foco no aprendizado dos principais pontos de acessibilidade e SEO (Search Engine Optimization)",
+    description: "Landing Page para agência imobiliária fictícia desenvolvida com foco no aprendizado dos principais pontos de acessibilidade e SEO",
     technologies: [createIcons("html"), createIcons("css"), createIcons("js")],
     cover_image: createImages("real-trust-banner.webp"),
     link: "https://lannavx.github.io/lp-real-trust/",
